@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sustainable Mulki Solutions · Business Flowchart</title>
+<meta name="description" content="How Sustainable Mulki Solutions works: Assess, Design, Coordinate, Monitor. A scrolling process flowchart of the business model, with a before and after view of the town.">
+<meta name="theme-color" content="#061923">
+<script>document.documentElement.className='js'</script>
+<style>
+:root{--bg:#061923;--teal:#2dd4bf;--amber:#f6b73c;--peri:#8ea2ff;--pink:#f472b6;--ink:#eaf6f8;--muted:#9fc0c9;--glass-b:rgba(255,255,255,.18);--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(1200px 800px at 80% -10%,#14586a 0%,#0b3040 45%,#061923 100%)}
+.orb{position:fixed;z-index:-2;border-radius:50%;filter:blur(70px);opacity:.5;will-change:transform;pointer-events:none}
+.o1{width:480px;height:480px;left:-140px;top:12vh;background:radial-gradient(circle,#2dd4bf 0%,transparent 70%)}
+.o2{width:520px;height:520px;right:-180px;top:46vh;background:radial-gradient(circle,#8ea2ff 0%,transparent 70%);opacity:.38}
+.o3{width:420px;height:420px;left:30vw;bottom:-160px;background:radial-gradient(circle,#f6b73c 0%,transparent 70%);opacity:.22}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+
+/* top bar */
+.bar{position:fixed;left:0;top:0;right:0;height:3px;z-index:50;background:rgba(255,255,255,.06)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--amber),var(--peri));box-shadow:0 0 12px rgba(45,212,191,.8)}
+.dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:12px;padding:12px 8px;border-radius:999px;background:rgba(10,35,48,.55);border:1px solid var(--glass-b)}
+.dots a{position:relative;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);transition:.3s var(--ease);display:block}
+.dots a.on{background:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.25);transform:scale(1.2)}
+.dots a span{position:absolute;right:20px;top:50%;transform:translateY(-50%) translateX(6px);white-space:nowrap;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(6,25,35,.92);border:1px solid var(--glass-b);opacity:0;pointer-events:none;transition:.25s}
+.dots a:hover span{opacity:1;transform:translateY(-50%)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px) scale(.985);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.fl{transform:translateX(-46px) scale(.985)}
+.js .rv.fr{transform:translateX(46px) scale(.985)}
+.js .rv.in{opacity:1;transform:none}
+
+/* glass */
+.card{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.04));border:1px solid var(--glass-b);border-radius:22px;padding:24px 26px;box-shadow:0 18px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.28)}
+.card.in{-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--c,var(--teal));margin-bottom:8px}
+.card h2{font-size:clamp(22px,3vw,30px);line-height:1.15;font-weight:750;letter-spacing:-.3px;margin-bottom:10px}
+.card h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.card p{color:#cfe6ec;font-size:15px}
+.card p+p{margin-top:10px}
+.note{margin-top:14px;padding:10px 14px;border-radius:12px;background:rgba(246,183,60,.1);border:1px solid rgba(246,183,60,.35);font-size:13px;color:#f6e3b4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:13px}
+.chip b{color:var(--amber);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:16px}
+.stat{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.stat b{display:block;font-size:22px;line-height:1.1;font-weight:750;color:var(--amber);letter-spacing:-.3px}
+.stat span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.3}
+ul.ck{list-style:none;padding:0;margin:12px 0 0}
+ul.ck li{position:relative;padding:0 0 8px 20px;font-size:14px;color:#dcecf0}
+ul.ck li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:50%;background:var(--c,var(--teal))}
+
+/* hero */
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:90px 20px 60px;position:relative}
+.hero .eyebrow{display:inline-block;padding:7px 16px;border-radius:999px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--teal);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.4)}
+.hero h1{font-size:clamp(38px,7vw,78px);line-height:1.02;font-weight:800;letter-spacing:-1.5px;margin:22px auto 18px;max-width:900px;background:linear-gradient(120deg,#fff 20%,#9ff3e6 60%,#f6d58a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{max-width:640px;margin:0 auto;font-size:clamp(16px,2vw,19px);color:#bcd6dd}
+.loop{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin:34px 0 0}
+.loop span{padding:11px 20px;border-radius:14px;font-weight:700;background:rgba(255,255,255,.08);border:1px solid var(--glass-b);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.loop em{font-style:normal;color:var(--teal);font-size:20px}
+.team{margin-top:26px;font-size:13px;color:var(--muted)}
+.cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;text-align:center}
+.cue i{display:block;width:22px;height:36px;border:2px solid rgba(255,255,255,.4);border-radius:14px;margin:0 auto 8px;position:relative}
+.cue i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;border-radius:2px;margin-left:-2px;background:var(--teal);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+
+/* flow spine */
+.flow{position:relative;max-width:1120px;margin:0 auto;padding:20px 20px 40px}
+.spine{position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:rgba(255,255,255,.1);border-radius:3px}
+.fill{position:absolute;left:0;top:0;width:100%;height:0;border-radius:3px;background:linear-gradient(var(--teal),var(--amber),var(--peri),var(--pink));box-shadow:0 0 16px rgba(45,212,191,.65)}
+.fill::after{content:"";position:absolute;left:50%;bottom:-7px;width:15px;height:15px;margin-left:-7.5px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(45,212,191,.35),0 0 22px 6px rgba(45,212,191,.8)}
+.node{position:relative;display:grid;grid-template-columns:1fr 76px 1fr;margin:54px 0}
+.node .card{grid-column:1}
+.node.r .card{grid-column:3}
+.node .card::before{content:"";position:absolute;top:34px;right:-38px;width:38px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.35),var(--c,var(--teal)));transform-origin:left;transition:transform .8s var(--ease) .3s;transform:scaleX(0)}
+.node.r .card::before{right:auto;left:-38px;transform-origin:right;background:linear-gradient(270deg,rgba(255,255,255,.35),var(--c,var(--teal)))}
+.node .card.in::before,.js .node.in .card::before{transform:scaleX(1)}
+.badge{position:absolute;left:50%;top:14px;margin-left:-22px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;color:#042a30;background:var(--c,var(--teal));box-shadow:0 0 0 6px rgba(6,25,35,.9),0 0 24px var(--c,var(--teal));z-index:2;transition:transform .6s var(--ease)}
+.js .node:not(.in) .badge{transform:scale(.3)}
+.wide{position:relative;margin:54px 0}
+.wide .badge{position:relative;left:auto;top:auto;margin:0 auto 18px}
+.wide>.card{background:linear-gradient(145deg,rgba(14,48,64,.78),rgba(8,32,44,.68))}
+.wide .head{text-align:center;max-width:720px;margin:0 auto 22px}
+.wide .head h2{font-size:clamp(24px,3.4vw,36px);font-weight:780;letter-spacing:-.5px;margin-bottom:8px}
+.wide .head p{color:#cfe6ec}
+
+/* engine steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{position:relative;padding:20px 20px 16px}
+.step .n{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-weight:800;color:#042a30;background:var(--c);margin-bottom:10px;box-shadow:0 0 18px var(--c)}
+.step h3{font-size:20px;color:var(--c)}
+.step .goal{font-size:13px;color:var(--muted);margin-bottom:8px}
+.step:not(:last-child)::after{content:"";position:absolute;top:44px;right:-27px;width:28px;height:2px;background:linear-gradient(90deg,var(--c),var(--c2))}
+.step:not(:last-child)::before{content:"";position:absolute;top:39px;right:-30px;border:6px solid transparent;border-left:9px solid var(--c2);border-right:0;z-index:2}
+.loopback{margin-top:18px;text-align:center;font-size:13px;color:var(--muted)}
+.loopback b{color:var(--teal)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pil{padding:20px 22px}
+.pil h3{color:var(--c);font-size:19px}
+.pil .row{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:13.5px}
+.pil .row:last-child{border:0}
+.pil .row span{color:var(--muted)}
+.pil .row b{text-align:right;color:#fff;font-weight:650}
+.total{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+
+/* layers */
+.layers{display:grid;gap:12px}
+.layer{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
+.layer .no{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:800;background:rgba(255,255,255,.1)}
+.layer h3{font-size:16px;margin:0}.layer p{font-size:13px;color:var(--muted)}
+.layer .who{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.layer.lead{border-color:rgba(45,212,191,.55);background:rgba(45,212,191,.09)}
+.layer.lead .no{background:var(--teal);color:#042a30}
+.layer.lead .who{background:rgba(45,212,191,.2);color:var(--teal)}
+.layer.part .who{background:rgba(142,162,255,.18);color:var(--peri)}
+.layer.part{border-style:dashed}
+.firms{margin-top:18px;font-size:13px;color:var(--muted)}
+
+/* route to market */
+.decide{display:block;margin:0 auto;width:min(480px,100%);text-align:center;padding:18px 30px;font-weight:700;background:linear-gradient(145deg,rgba(246,183,60,.22),rgba(246,183,60,.08));border:1px solid rgba(246,183,60,.6);clip-path:polygon(7% 0,93% 0,100% 50%,93% 100%,7% 100%,0 50%)}
+.decide small{display:block;font-weight:500;color:#f1deb0;font-size:13px}
+.stem{width:2px;height:30px;margin:0 auto;background:rgba(255,255,255,.3)}
+.branches{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-top:30px}
+.branches::before{content:"";position:absolute;top:0;left:25%;right:25%;height:30px;border:2px solid rgba(255,255,255,.3);border-bottom:0;border-radius:14px 14px 0 0}
+.br{padding:20px 22px}
+.br h3{color:var(--c)}
+.t{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:13.5px}
+.t:last-of-type{border:0}.t b{color:var(--amber);white-space:nowrap}.t span{color:#dcecf0}
+.t small{display:block;color:var(--muted);font-size:11.5px}
+
+/* revenue */
+.stream{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stream .card{padding:18px}
+.stream .v{font-size:26px;font-weight:780;color:var(--amber)}
+.stream .l{font-size:13px;color:var(--muted)}
+.merge{display:block;margin:6px auto;text-align:center;color:var(--teal);font-size:26px;line-height:1}
+.bars{margin-top:8px}
+.bar2{display:flex;height:46px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);margin-bottom:12px}
+.bar2 div{display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;width:0;transition:width 1.4s var(--ease);overflow:hidden;white-space:nowrap;color:#042a30}
+.bar-l{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin:14px 4px 6px}
+
+/* roadmap */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.tl::before{content:"";position:absolute;left:6%;right:6%;top:21px;height:2px;background:linear-gradient(90deg,var(--teal),var(--peri),var(--pink),var(--amber))}
+.ph{position:relative;padding-top:50px}
+.ph .d{position:absolute;top:8px;left:50%;margin-left:-14px;width:28px;height:28px;border-radius:50%;background:var(--c);box-shadow:0 0 0 6px rgba(6,25,35,.9),0 0 20px var(--c)}
+.ph .card{padding:16px 16px 12px;text-align:left}
+.ph h3{color:var(--c);font-size:15px}
+.ph p{font-size:13px}
+.five{margin-top:26px}
+.five h3{text-align:center;font-size:15px;color:var(--muted);font-weight:600;margin-bottom:12px}
+.fiveRow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.fiveRow span{padding:9px 16px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);font-size:13px}
+.fiveRow span b{color:var(--teal)}
+
+/* guardrails */
+.gr{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px}
+.gr li{list-style:none}
+
+/* before / after */
+.cmp{position:relative;width:100%;aspect-ratio:800/420;border-radius:22px;overflow:hidden;border:1px solid var(--glass-b);box-shadow:0 24px 60px rgba(0,0,0,.45);touch-action:pan-y;user-select:none;-webkit-user-select:none;background:#10202b}
+.cmp svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.cmp .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.cmp .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:44px;margin-left:-22px;cursor:ew-resize;display:grid;place-items:center;outline:none}
+.cmp .handle::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 14px rgba(255,255,255,.8)}
+.cmp .handle i{position:relative;width:44px;height:44px;border-radius:50%;background:rgba(6,25,35,.8);border:2px solid #fff;display:grid;place-items:center;font-style:normal;font-size:16px;font-weight:800;box-shadow:0 6px 20px rgba(0,0,0,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.cmp .handle:focus-visible i{box-shadow:0 0 0 4px rgba(45,212,191,.7)}
+.cmp .side{position:absolute;top:14px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(6,25,35,.78);border:1px solid var(--glass-b);z-index:2}
+.cmp .s1{left:14px;color:#ffb4a6}.cmp .s2{right:14px;color:var(--teal)}
+.rainline{stroke:#c9ddea;stroke-width:1.4;opacity:.65;animation:fall .9s linear infinite}
+@keyframes fall{from{transform:translate(0,-40px)}to{transform:translate(-14px,330px)}}
+.svg-label{font:600 15px "Segoe UI",system-ui,sans-serif}
+.legend2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.legend2 .card{padding:18px 20px}
+.legend2 h3{font-size:15px}
+.legend2 .b h3{color:#ffb4a6}.legend2 .a h3{color:var(--teal)}
+.delta{width:100%;border-collapse:separate;border-spacing:0 10px}
+.delta th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 12px;font-weight:700}
+.delta td{padding:14px 14px;background:rgba(255,255,255,.06);vertical-align:top;font-size:14px;color:#dcecf0}
+.delta td:first-child{border-radius:14px 0 0 14px;font-weight:700;color:#fff;width:17%;border-left:3px solid var(--c)}
+.delta td:last-child{border-radius:0 14px 14px 0}
+.delta td.bf{color:#ffd0c6}.delta td.af{color:#b8fff2}
+.delta td b{color:var(--amber)}
+.gauges{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 26px;margin-top:6px}
+.g .lbl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;color:#dcecf0}
+.g .lbl b{color:var(--amber)}
+.g .tr{height:10px;border-radius:6px;background:rgba(255,255,255,.08);margin-bottom:6px;overflow:hidden;position:relative}
+.g .tr i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;transition:width 1.5s var(--ease)}
+.g .tr.b i{background:linear-gradient(90deg,#ff8a75,#ffb4a6)}
+.g .tr.a i{background:linear-gradient(90deg,var(--teal),#8ff5e6)}
+.g small{font-size:11.5px;color:var(--muted)}
+
+/* closing */
+.close{text-align:center;padding:60px 20px 40px}
+.close h2{font-size:clamp(28px,4.5vw,48px);font-weight:800;letter-spacing:-1px;line-height:1.08;max-width:760px;margin:0 auto 14px}
+.close p{max-width:640px;margin:0 auto;color:#bcd6dd}
+.src{max-width:900px;margin:30px auto 0;font-size:12.5px;color:var(--muted);text-align:left;line-height:1.6}
+.src b{color:#dcecf0}
+footer{text-align:center;padding:30px 20px 60px;font-size:12px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:980px){
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2)::after,.step:nth-child(2)::before{display:none}
+  .tl{grid-template-columns:repeat(2,1fr)}.tl::before{display:none}
+  .dots{display:none}
+}
+@media (max-width:860px){
+  .spine{left:24px}
+  .node{grid-template-columns:1fr;padding-left:58px}
+  .node .card,.node.r .card{grid-column:1}
+  .badge{left:24px;margin-left:-20px;width:40px;height:40px}
+  .node .card::before,.node.r .card::before{left:-30px;right:auto;width:30px;top:30px;transform-origin:right;background:linear-gradient(270deg,rgba(255,255,255,.35),var(--c,var(--teal)))}
+  .flow{padding:20px 14px 30px}
+  .wide .badge{margin-left:auto;left:auto}
+  .pillars,.gr,.branches,.stream,.legend2,.gauges{grid-template-columns:1fr}
+  .branches::before{display:none}
+  .js .rv.fl,.js .rv.fr{transform:translateY(34px) scale(.985)}
+  .delta,.delta tbody,.delta tr,.delta td{display:block;width:100%}
+  .delta thead{display:none}
+  .delta tr{margin-bottom:14px;background:rgba(255,255,255,.04);border-radius:14px;overflow:hidden}
+  .delta td{border-radius:0!important;background:transparent;padding:8px 14px}
+  .delta td:first-child{width:100%;border-left:0;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06)}
+  .delta td.bf::before{content:"BEFORE  ";font-size:10px;letter-spacing:.14em;font-weight:800;color:#ff9a86}
+  .delta td.af::before{content:"AFTER  ";font-size:10px;letter-spacing:.14em;font-weight:800;color:var(--teal)}
+  .layer{grid-template-columns:36px 1fr}.layer .who{grid-column:2;justify-self:start}
+}
+@media (max-width:620px){
+  .steps,.tl{grid-template-columns:1fr}
+  .step::after,.step::before{display:none}
+  .svg-label{display:none}
+  .cmp .side{font-size:10px;padding:5px 10px}
+  .card{padding:20px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv,.js .rv.fl,.js .rv.fr{opacity:1;transform:none;transition:none}
+  .rainline,.cue i::after{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="bar"><i id="prog"></i></div>
+<div class="orb o1" data-p=".05"></div><div class="orb o2" data-p="-.04"></div><div class="orb o3" data-p=".03"></div>
+<nav class="dots" id="dots" aria-label="Sections"></nav>
+
+<header class="hero" id="top" data-nav="Start">
+  <div>
+    <span class="eyebrow rv">SDG 11 · Sustainable Cities &amp; Communities</span>
+    <h1 class="rv" style="--d:.1s">Sustainable Mulki Solutions</h1>
+    <p class="sub rv" style="--d:.2s">How the business works, step by step. Scroll down to follow the process from a flooding town to a measured, costed and monitored plan.</p>
+    <div class="loop rv" style="--d:.3s"><span style="color:var(--teal)">Assess</span><em>→</em><span style="color:var(--peri)">Design</span><em>→</em><span style="color:var(--pink)">Coordinate</span><em>→</em><span style="color:var(--amber)">Monitor</span></div>
+    <p class="team rv" style="--d:.4s">Abhinav · Sam · Gajanan · Krrish &nbsp;|&nbsp; Hult sustainability hackathon</p>
+  </div>
+  <div class="cue"><i></i>Scroll</div>
+</header>
+
+<main class="flow" id="flow">
+  <div class="spine"><div class="fill" id="fill"></div></div>
+
+  <!-- 1 PROBLEM -->
+  <section class="node l" id="problem" data-nav="Problem" style="--c:#fb7185">
+    <div class="badge">1</div>
+    <div class="card rv fl">
+      <span class="tag">The problem</span>
+      <h2>Mulki floods every monsoon</h2>
+      <p>The Shambhavi rises and the Arabian Sea pushes back. Roads, power and homes were not designed for 3,500 mm of rain a year. Fixes tend to be one-off and unpriced, with no shared baseline data.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="3500" data-sep="1">0</b><span>mm of rain a year</span></div>
+        <div class="stat"><b data-count="17000" data-sep="1" data-pre="~">0</b><span>people</span></div>
+        <div class="stat"><b data-count="6073" data-sep="1">0</b><span>homes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 VENTURE -->
+  <section class="node r" id="venture" data-nav="Venture" style="--c:#2dd4bf">
+    <div class="badge">2</div>
+    <div class="card rv fr">
+      <span class="tag">Our venture</span>
+      <h2>An asset-light sustainability consultancy</h2>
+      <p>Sustainable Mulki Solutions is a project-design and coordination company. We start with baseline studies, project preparation, feasibility, planning and reporting, working with qualified partners.</p>
+      <p><b style="color:#fff">We do not assume we will build.</b> Construction and certified engineering stay with specialists.</p>
+      <div class="note">Mulki is our demonstration method. It is not an approved plan or a secured contract.</div>
+    </div>
+  </section>
+
+  <!-- 3 CUSTOMERS -->
+  <section class="wide" id="customers" data-nav="Customers">
+    <div class="badge rv" style="--c:#f6b73c">3</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#f6b73c">Who pays</span><h2>Seven customer groups</h2><p>Anyone responsible for energy, water, waste or infrastructure in a town needs a baseline and a costed plan.</p></div>
+      <div class="chips" style="justify-content:center">
+        <span class="chip rv" style="--d:.05s">🏛️ Municipal &amp; local authorities</span>
+        <span class="chip rv" style="--d:.1s">🏫 Government schools &amp; public facilities</span>
+        <span class="chip rv" style="--d:.15s">🏭 PSUs</span>
+        <span class="chip rv" style="--d:.2s">🏢 Apartment associations</span>
+        <span class="chip rv" style="--d:.25s">🏨 Hotels &amp; homestays</span>
+        <span class="chip rv" style="--d:.3s">🏪 SMEs</span>
+        <span class="chip rv" style="--d:.35s">🤝 CSR teams &amp; funders</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ENGINE -->
+  <section class="wide" id="engine" data-nav="Process">
+    <div class="badge rv" style="--c:#8ea2ff">4</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#8ea2ff">The operating model</span><h2>Assess → Design → Coordinate → Monitor</h2><p>Every assignment follows the same four steps, so each client gets a clear scope and clear deliverables.</p></div>
+      <div class="steps">
+        <div class="step card rv" style="--c:#2dd4bf;--c2:#8ea2ff;--d:.05s"><div class="n">1</div><h3>Assess</h3><div class="goal">Know the starting point</div>
+          <ul class="ck"><li>Baseline sustainability audits</li><li>Energy use and rooftop-solar feasibility</li><li>Water audits and rainwater feasibility</li><li>Solid-waste surveys</li><li>GIS mapping and asset inventory</li><li>Drainage and waterlogging surveys</li></ul></div>
+        <div class="step card rv" style="--c:#8ea2ff;--c2:#f472b6;--d:.15s"><div class="n">2</div><h3>Design</h3><div class="goal">Turn findings into a plan</div>
+          <ul class="ck"><li>Town development and investment plans</li><li>Feasibility studies</li><li>Costing and phasing</li><li>Procurement documents</li><li>Vendor comparisons</li></ul></div>
+        <div class="step card rv" style="--c:#f472b6;--c2:#f6b73c;--d:.25s"><div class="n">3</div><h3>Coordinate</h3><div class="goal">Get it delivered</div>
+          <ul class="ck"><li>Implementation coordination</li><li>Specialist partners: energy, water, GIS, civil and drainage</li><li>Funding and grant proposals where appropriate</li></ul></div>
+        <div class="step card rv" style="--c:#f6b73c;--c2:#f6b73c;--d:.35s"><div class="n">4</div><h3>Monitor</h3><div class="goal">Prove it worked</div>
+          <ul class="ck"><li>Energy, water and waste dashboards</li><li>Annual performance monitoring</li><li>Workshops and training</li></ul></div>
+      </div>
+      <p class="loopback">Monitoring data feeds the next <b>Assess</b> step, so each cycle starts from measured results.</p>
+    </div>
+  </section>
+
+  <!-- 5 PILLARS -->
+  <section class="wide" id="pillars" data-nav="Mulki plan">
+    <div class="badge rv" style="--c:#f472b6">5</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#f472b6">Our demonstration: Mulki</span><h2>Four pillars, one town</h2><p>The first showcase applies the four steps to energy, water, roads and housing.</p></div>
+      <div class="pillars">
+        <div class="pil card rv" style="--c:#f6b73c;--d:.05s"><h3>⚡ Energy</h3>
+          <div class="row"><span>Rooftop solar</span><b>6,073 homes × 6 kWp = 36.4 MWp</b></div>
+          <div class="row"><span>Cost</span><b>₹138.5–182.2 Cr</b></div>
+          <div class="row"><span>Subsidy</span><b>up to ₹47.4 Cr</b></div>
+          <div class="row"><span>Household payback</span><b>2.7–5.2 years</b></div>
+          <div class="row"><span>Microgrid + battery</span><b>₹7.3–12.1 Cr</b></div></div>
+        <div class="pil card rv" style="--c:#38bdf8;--d:.12s"><h3>💧 Water</h3>
+          <div class="row"><span>Roof tanks</span><b>2,000 L per home</b></div>
+          <div class="row"><span>Green drains (swales)</span><b>42 km at ₹1,200/m</b></div>
+          <div class="row"><span>Basins + sensors</span><b>5 basins · 20 sensors</b></div>
+          <div class="row"><span>Whole network</span><b>₹17.30 Cr</b></div>
+          <div class="row"><span>Gross yearly yield</span><b>2.12 billion L</b></div></div>
+        <div class="pil card rv" style="--c:#f472b6;--d:.19s"><h3>🛣️ Roads</h3>
+          <div class="row"><span>Main road (plastic-bitumen)</span><b>₹72–122 L/km</b></div>
+          <div class="row"><span>Permeable lane</span><b>₹82–138 L/km</b></div>
+          <div class="row"><span>Plain concrete lane</span><b>₹45.5–63 L/km</b></div>
+          <div class="row"><span>Geocell riverbank</span><b>₹52–104 L/km</b></div>
+          <div class="row"><span>Run-off, permeable</span><b>−76% (field-study average)</b></div></div>
+        <div class="pil card rv" style="--c:#fb923c;--d:.26s"><h3>🏠 Housing</h3>
+          <div class="row"><span>3BHK, stilt (model)</span><b>₹25.0 L</b></div>
+          <div class="row"><span>3BHK, traditional</span><b>₹27.4 L</b></div>
+          <div class="row"><span>Office frame</span><b>₹3,100–4,900 / sq ft</b></div>
+          <div class="row"><span>Facade carbon</span><b>about 90% less</b></div>
+          <div class="row"><span>Bamboo vs steel</span><b>about 65% cheaper</b></div></div>
+      </div>
+      <div class="total">
+        <div class="stat rv"><b>₹166.7–218.0 Cr</b><span>programme, gross</span></div>
+        <div class="stat rv" style="--d:.08s"><b>₹119–171 Cr</b><span>after subsidy</span></div>
+        <div class="stat rv" style="--d:.16s"><b>~63%</b><span>paid by households</span></div>
+      </div>
+      <div class="note">These are planning assumptions, not validated designs. Still needed: real electricity demand and outage data, roof surveys, measured wind, drainage and hydraulic data, verified road lengths, contractor quotes and engineering review.</div>
+    </div>
+  </section>
+
+  <!-- 6 LAYERS -->
+  <section class="node l" id="layers" data-nav="Positioning" style="--c:#8ea2ff">
+    <div class="badge">6</div>
+    <div class="card rv fl">
+      <span class="tag">Where we sit</span>
+      <h2>Town-level planning and project preparation</h2>
+      <p>A town-development consultancy has four layers. We start with the ones that need data, costing and monitoring, and bring in partners for regulated engineering.</p>
+      <div class="layers" style="margin-top:16px">
+        <div class="layer lead"><div class="no">1</div><div><h3>Vision &amp; master planning</h3><p>Baseline, GIS asset inventory, prioritised projects</p></div><span class="who">We lead</span></div>
+        <div class="layer lead"><div class="no">2</div><div><h3>Finance &amp; investment</h3><p>Preliminary costs, phased investment plan</p></div><span class="who">We lead</span></div>
+        <div class="layer part"><div class="no">3</div><div><h3>Engineering &amp; implementation</h3><p>Signed designs, supervision, certified audits</p></div><span class="who">Partners</span></div>
+        <div class="layer lead"><div class="no">4</div><div><h3>Sustainability &amp; performance</h3><p>Energy, water, waste, resilience, monitoring framework</p></div><span class="who">We lead</span></div>
+      </div>
+      <p class="firms">Established players such as CRISIL, KPMG India, Voyants, Grant Thornton Bharat, WAPCOS, AECOM India and Tata Consulting Engineers work on large city programmes. We begin at town scale.</p>
+    </div>
+  </section>
+
+  <!-- 7 ROUTE -->
+  <section class="wide" id="route" data-nav="Route to market">
+    <div class="badge rv" style="--c:#f6b73c">7</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#f6b73c">How we win work</span><h2>Government e-Marketplace (GeM) and partnerships</h2><p>A defined service with clear deliverables is easier to buy than a promise to "make Mulki sustainable". Our route depends on the size of the job and what the bid asks for.</p></div>
+      <div class="decide rv">Can we meet the bid's eligibility?<small>Turnover, years of experience, deposit, deliverables</small></div>
+      <div class="stem"></div>
+      <div class="branches">
+        <div class="br card rv" style="--c:#2dd4bf;--d:.05s"><h3>↘ Small, well-defined job: bid directly</h3>
+          <div class="t"><span>Energy audit, NFL<small>GEM/2025/B/6408105</small></span><b>₹2.10 L</b></div>
+          <div class="t"><span>Solid-waste action plan, Indian Army<small>GEM/2024/B/5422720</small></span><b>₹5.9 L</b></div>
+          <div class="t"><span>Water audit, Numaligarh Refinery<small>GEM/2025/B/6263049</small></span><b>₹8 L</b></div></div>
+        <div class="br card rv" style="--c:#8ea2ff;--d:.15s"><h3>↗ Larger or strict: join a partner or consortium</h3>
+          <div class="t"><span>Energy audit, IREL<small>reported 7-year experience requirement</small></span><b>₹3.89 L</b></div>
+          <div class="t"><span>GIS survey, INS Kadamba<small>GEM/2026/B/7888753</small></span><b>₹10.6 L</b></div>
+          <div class="t"><span>GIS, Survey of India<small>reported ₹60 L turnover, 5 years' experience</small></span><b>₹15.43 L</b></div>
+          <div class="t"><span>City Development Plan (lowest bid)<small>GEM/2026/B/7705384</small></span><b>₹24.99 L</b></div>
+          <div class="t"><span>Municipal GIS, Uttar Pradesh<small>GEM/2026/B/8098164</small></span><b>~₹90.67 L</b></div></div>
+      </div>
+      <div class="note">Tender details were reported by third-party trackers. Check the original GeM bid documents for scope, dates, eligibility and status. These are precedents, not proof of a contract, and estimated values are not guaranteed revenue.</div>
+    </div>
+  </section>
+
+  <!-- 8 REVENUE -->
+  <section class="wide" id="revenue" data-nav="Revenue">
+    <div class="badge rv" style="--c:#2dd4bf">8</div>
+    <div class="card rv">
+      <div class="head"><span class="tag">How we earn</span><h2>A first-year scenario</h2><p>Three simple services and a small cost base. This is an illustration of the model, not a forecast.</p></div>
+      <div class="stream">
+        <div class="card rv" style="--d:.05s"><div class="l">6 baseline audits</div><div class="v">₹1.50 L</div><div class="l">6 × ₹25,000</div></div>
+        <div class="card rv" style="--d:.12s"><div class="l">3 feasibility plans</div><div class="v">₹2.25 L</div><div class="l">3 × ₹75,000</div></div>
+        <div class="card rv" style="--d:.19s"><div class="l">3 monitoring clients</div><div class="v">₹1.44 L</div><div class="l">3 × ₹8,000 × 6 months</div></div>
+      </div>
+      <span class="merge">⬇</span>
+      <div class="bars" id="revBars">
+        <div class="bar-l"><span>Revenue ₹5.19 L</span><span>split by service</span></div>
+        <div class="bar2"><div data-w="28.9" style="background:#2dd4bf">Audits</div><div data-w="43.4" style="background:#8ea2ff">Feasibility</div><div data-w="27.7" style="background:#f6b73c">Monitoring</div></div>
+        <div class="bar-l"><span>Where the ₹5.19 L goes</span><span>before tax and founder pay</span></div>
+        <div class="bar2"><div data-w="38.5" style="background:#f472b6">Costs ₹2.00 L</div><div data-w="61.5" style="background:#34d399">Surplus ₹3.19 L</div></div>
+      </div>
+      <div class="chips" style="justify-content:center">
+        <span class="chip">Baseline audit <b>₹15–75k</b></span><span class="chip">Project plan <b>₹50k–2 L</b></span><span class="chip">Feasibility <b>₹50k–1.5 L</b></span><span class="chip">Annual monitoring <b>₹24k–1.2 L</b></span><span class="chip">Workshop <b>₹10–30k</b></span><span class="chip">Coordination <b>5–10% of project value*</b></span>
+      </div>
+      <div class="note">Prices are our own hypotheses and have not been checked against the market. *Only where scope and procurement rules allow it.</div>
+    </div>
+  </section>
+
+  <!-- 9 ROADMAP -->
+  <section class="wide" id="roadmap" data-nav="Roadmap">
+    <div class="badge rv" style="--c:#8ea2ff">9</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#8ea2ff">Launch</span><h2>The first 90 days</h2><p>The aim is one or two paid pilot assignments.</p></div>
+      <div class="tl">
+        <div class="ph rv" style="--c:#2dd4bf;--d:.05s"><span class="d"></span><div class="card"><h3>Days 1–15</h3><p>Define packages, roles, deliverables and boundaries.</p></div></div>
+        <div class="ph rv" style="--c:#8ea2ff;--d:.15s"><span class="d"></span><div class="card"><h3>Days 16–30</h3><p>Line up specialist partners: energy, water, GIS, civil and drainage.</p></div></div>
+        <div class="ph rv" style="--c:#f472b6;--d:.25s"><span class="d"></span><div class="card"><h3>Days 31–60</h3><p>Interview about 20 prospective customers.</p></div></div>
+        <div class="ph rv" style="--c:#f6b73c;--d:.35s"><span class="d"></span><div class="card"><h3>Days 61–90</h3><p>Win 1–2 paid pilot assignments.</p></div></div>
+      </div>
+      <div class="five rv"><h3>Then, for Mulki, the plan is delivered in five phases over five years. Each phase starts only when the data says go.</h3>
+        <div class="fiveRow"><span><b>1</b> Survey</span><span><b>2</b> Pilot</span><span><b>3</b> Scale up</span><span><b>4</b> Wind &amp; industry</span><span><b>5</b> Link it all up</span></div></div>
+    </div>
+  </section>
+
+  <!-- 10 GUARDRAILS -->
+  <section class="node r" id="rules" data-nav="Guardrails" style="--c:#34d399">
+    <div class="badge">10</div>
+    <div class="card rv fr">
+      <span class="tag">Guardrails</span>
+      <h2>What we promise, and what we don't</h2>
+      <ul class="ck">
+        <li>Use qualified specialists for certified audits, electrical, structural, flood and hydraulic engineering, and signed designs.</li>
+        <li>Never guarantee savings, grants, subsidies, flood prevention or approvals.</li>
+        <li>Disclose any referral fees. Agree written scopes. Protect client data.</li>
+        <li>Follow procurement rules, and do not claim an award without an award record.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11 BEFORE / AFTER -->
+  <section class="wide" id="compare" data-nav="Before / After">
+    <div class="badge rv" style="--c:#f472b6">11</div>
+    <div class="card rv">
+      <div class="head"><span class="tag" style="--c:#f472b6">The improvement</span><h2>Mulki before and after the plan</h2><p>Drag the handle across the town. Left is how a typical monsoon town works today. Right is the same street with our development plan.</p></div>
+
+      <div class="cmp" id="cmp" style="--pos:50%">
+        <svg class="before" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#232f39"/><stop offset="1" stop-color="#4d5f6c"/></linearGradient></defs>
+          <rect width="800" height="420" fill="url(#skyB)"/>
+          <g fill="#3a4854"><ellipse cx="150" cy="58" rx="115" ry="30"/><ellipse cx="340" cy="38" rx="90" ry="26"/><ellipse cx="560" cy="68" rx="125" ry="32"/><ellipse cx="735" cy="36" rx="80" ry="24"/></g>
+          <rect y="292" width="800" height="128" fill="#4d4a45"/>
+          <rect x="610" y="258" width="190" height="162" fill="#6b5a45"/>
+          <g><rect x="70" y="215" width="130" height="95" fill="#a8523d"/><polygon points="58,217 135,160 212,217" fill="#4e3d30"/><rect x="95" y="255" width="26" height="55" fill="#3a2a22"/><rect x="145" y="240" width="30" height="26" fill="#6e8794"/></g>
+          <g><rect x="250" y="225" width="120" height="85" fill="#9b4c39"/><polygon points="238,227 310,172 382,227" fill="#4e3d30"/><rect x="272" y="262" width="24" height="48" fill="#3a2a22"/><rect x="322" y="248" width="28" height="24" fill="#6e8794"/></g>
+          <rect x="410" y="172" width="6" height="128" fill="#3a3330"/><rect x="392" y="180" width="42" height="5" fill="#3a3330"/><circle cx="413" cy="170" r="5" fill="#59534e"/>
+          <path d="M0 288 Q50 280 100 288 T200 288 T300 288 T400 288 T500 288 T600 288 T700 288 T800 288 V420 H0Z" fill="#7a6b52" opacity=".62"/>
+          <rect x="400" y="300" width="190" height="26" rx="3" fill="#8a9097"/><rect x="404" y="304" width="182" height="18" fill="#2f3438"/>
+          <path d="M430 313h120" stroke="#9fb4c0" stroke-width="3"/><path d="M550 305l16 8-16 8z" fill="#9fb4c0"/>
+          <g id="rainB"></g>
+          <g class="svg-label">
+            <rect x="40" y="346" width="190" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#ffb4a6"/><text x="135" y="366" text-anchor="middle" fill="#ffd0c6">Floods every monsoon</text>
+            <rect x="372" y="346" width="248" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#ffb4a6"/><text x="496" y="366" text-anchor="middle" fill="#ffd0c6">Concrete drain: stores nothing</text>
+            <rect x="330" y="124" width="150" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#ffb4a6"/><text x="405" y="144" text-anchor="middle" fill="#ffd0c6">Main grid only</text>
+            <rect x="618" y="214" width="172" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#ffb4a6"/><text x="704" y="234" text-anchor="middle" fill="#ffd0c6">River takes the rush</text>
+          </g>
+        </svg>
+
+        <svg class="after" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c7388"/><stop offset="1" stop-color="#a6efe2"/></linearGradient>
+            <radialGradient id="sunA"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient></defs>
+          <rect width="800" height="420" fill="url(#skyA)"/>
+          <circle cx="690" cy="68" r="78" fill="url(#sunA)"/><circle cx="690" cy="68" r="32" fill="#ffd166"/>
+          <g fill="#fff" opacity=".55"><ellipse cx="170" cy="58" rx="100" ry="24"/><ellipse cx="420" cy="44" rx="80" ry="20"/><ellipse cx="560" cy="96" rx="70" ry="18"/></g>
+          <rect y="292" width="800" height="128" fill="#4f9a4a"/><rect y="292" width="800" height="8" fill="#3f8a45"/>
+          <rect x="60" y="294" width="160" height="14" fill="#38a9d6" opacity=".4"/><rect x="262" y="294" width="140" height="14" fill="#38a9d6" opacity=".4"/>
+          <!-- stilt home 1 -->
+          <g><rect x="82" y="232" width="8" height="64" fill="#8b9199"/><rect x="132" y="232" width="8" height="64" fill="#8b9199"/><rect x="184" y="232" width="8" height="64" fill="#8b9199"/>
+            <rect x="66" y="226" width="140" height="8" fill="#9ca3af"/><rect x="74" y="150" width="124" height="76" fill="#e3c77c"/><polygon points="62,152 136,102 210,152" fill="#5ccfb0"/>
+            <g transform="translate(82.4 134.4) rotate(-34)"><rect x="-17" y="-5.5" width="34" height="11" fill="#17306b" stroke="#c9d6e8" stroke-width="1.5"/></g>
+            <g transform="translate(106.1 118.4) rotate(-34)"><rect x="-17" y="-5.5" width="34" height="11" fill="#17306b" stroke="#c9d6e8" stroke-width="1.5"/></g>
+            <rect x="95" y="178" width="22" height="48" fill="#7a5a3c"/><rect x="145" y="168" width="28" height="22" fill="#9fd1ea"/></g>
+          <!-- tank -->
+          <path d="M205 158 L234 158 L234 214" stroke="#cfd6dc" stroke-width="4" fill="none"/><rect x="220" y="214" width="28" height="82" rx="9" fill="#38a9d6"/><rect x="225" y="222" width="5" height="64" rx="2" fill="#fff" opacity=".35"/>
+          <!-- stilt home 2 -->
+          <g><rect x="282" y="232" width="8" height="64" fill="#8b9199"/><rect x="330" y="232" width="8" height="64" fill="#8b9199"/><rect x="378" y="232" width="8" height="64" fill="#8b9199"/>
+            <rect x="266" y="226" width="132" height="8" fill="#9ca3af"/><rect x="274" y="156" width="116" height="70" fill="#dcc58a"/><polygon points="262,158 332,110 402,158" fill="#5ccfb0"/>
+            <g transform="translate(281.2 141) rotate(-34.5)"><rect x="-17" y="-5.5" width="34" height="11" fill="#17306b" stroke="#c9d6e8" stroke-width="1.5"/></g>
+            <g transform="translate(303.6 125.6) rotate(-34.5)"><rect x="-17" y="-5.5" width="34" height="11" fill="#17306b" stroke="#c9d6e8" stroke-width="1.5"/></g>
+            <rect x="292" y="180" width="22" height="46" fill="#7a5a3c"/><rect x="342" y="172" width="26" height="20" fill="#9fd1ea"/></g>
+          <!-- swale -->
+          <path d="M404 292 Q462 324 520 292 Z" fill="#6b4a30"/><path d="M418 296 Q462 316 506 296 Z" fill="#38a9d6" opacity=".9"/><path d="M404 292 Q462 324 520 292" stroke="#3f8a45" stroke-width="6" fill="none"/>
+          <g fill="#2f8f46"><path d="M412 292l-3-14 5 11 3-12 2 13z"/><path d="M440 300l-3-14 5 11 3-12 2 13z"/><path d="M486 300l-3-14 5 11 3-12 2 13z"/><path d="M510 292l-3-14 5 11 3-12 2 13z"/></g>
+          <rect x="520" y="297" width="16" height="6" fill="#38a9d6"/>
+          <!-- basin -->
+          <path d="M534 292 Q592 362 650 292 Z" fill="#6b4a30"/><path d="M550 300 Q592 346 634 300 Z" fill="#38a9d6"/><path d="M534 292 Q592 362 650 292" stroke="#3f8a45" stroke-width="6" fill="none"/>
+          <rect x="538" y="262" width="4" height="30" fill="#94a3b8"/><circle cx="540" cy="258" r="6" fill="#34d399"/><rect x="644" y="262" width="4" height="30" fill="#94a3b8"/><circle cx="646" cy="258" r="6" fill="#34d399"/>
+          <!-- microgrid -->
+          <rect x="720" y="170" width="6" height="130" fill="#6b5a45"/><rect x="704" y="178" width="38" height="5" fill="#6b5a45"/><circle cx="723" cy="168" r="26" fill="#fde68a" opacity=".3"/><circle cx="723" cy="168" r="8" fill="#fde68a"/>
+          <rect x="745" y="250" width="4" height="46" fill="#9ca3af"/><rect x="777" y="250" width="4" height="46" fill="#9ca3af"/><rect x="738" y="214" width="50" height="36" rx="4" fill="#14b8a6"/><rect x="744" y="222" width="38" height="6" fill="#eafffb" opacity=".85"/>
+          <path d="M726 190 Q740 200 750 214" stroke="#222c33" stroke-width="2.5" fill="none"/>
+          <g id="rainA"></g>
+          <g class="svg-label">
+            <rect x="40" y="346" width="170" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#2dd4bf"/><text x="125" y="366" text-anchor="middle" fill="#b8fff2">Stilt home + solar</text>
+            <rect x="214" y="346" width="106" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#2dd4bf"/><text x="267" y="366" text-anchor="middle" fill="#b8fff2">2,000 L tank</text>
+            <rect x="410" y="346" width="96" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#2dd4bf"/><text x="458" y="366" text-anchor="middle" fill="#b8fff2">Swale</text>
+            <rect x="516" y="346" width="150" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#2dd4bf"/><text x="591" y="366" text-anchor="middle" fill="#b8fff2">Basin + sensors</text>
+            <rect x="676" y="346" width="110" height="30" rx="15" fill="rgba(6,25,35,.8)" stroke="#2dd4bf"/><text x="731" y="366" text-anchor="middle" fill="#b8fff2">Microgrid</text>
+          </g>
+        </svg>
+        <span class="side s1">Today</span><span class="side s2">With the plan</span>
+        <div class="handle" id="handle" tabindex="0" role="slider" aria-label="Compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i>⇆</i></div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:10px">Illustration, not to scale. It shows the ideas in our plan, not an engineered design.</p>
+
+      <div style="margin:30px 0 6px;text-align:center"><span class="tag" style="--c:#2dd4bf">Side by side</span></div>
+      <table class="delta">
+        <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
+        <tbody>
+          <tr style="--c:#2dd4bf"><td>How the town is planned</td><td class="bf">One-off, unpriced ideas. No baseline data, no shared map of assets, no monitoring.</td><td class="af">Baseline and GIS asset inventory, a costed and phased plan, specialist delivery, and dashboards that track results.</td></tr>
+          <tr style="--c:#38bdf8"><td>Rain</td><td class="bf">Concrete drains rush water to the river and store nothing.</td><td class="af">Roof tanks (2,000 L each) feed <b>42 km</b> of swales and <b>5 basins</b>. <b>20 sensors</b> release water slowly after high tide.</td></tr>
+          <tr style="--c:#f6b73c"><td>Power</td><td class="bf">Relies on the main grid. Local outage data is still to be collected.</td><td class="af"><b>36.4 MWp</b> of rooftop solar, plus a microgrid (pilot: <b>250 kWh</b> battery) for the health centre, pumps and shelter.</td></tr>
+          <tr style="--c:#f472b6"><td>Roads</td><td class="bf">Sealed concrete lanes shed water straight to the drains. Cheaper: ₹45.5–63 L/km.</td><td class="af">Plastic-bitumen main roads with swales. Permeable lanes cut run-off about <b>76%</b> in field studies, at ₹82–138 L/km.</td></tr>
+          <tr style="--c:#fb923c"><td>Homes</td><td class="bf">Ground-level brick and concrete. A 3BHK costs about ₹27.4 L.</td><td class="af">Stilt homes above the flood line. A 3BHK is about <b>₹25.0 L</b> in our model, 5–15% cheaper. A builder's quote is still needed.</td></tr>
+          <tr style="--c:#a3e635"><td>Power bills</td><td class="bf">Full grid bills.</td><td class="af">Up to <b>₹18–31 Cr a year</b> avoided. This is an upper bound.</td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin:26px 0 12px;text-align:center"><span class="tag" style="--c:#2dd4bf">By the numbers</span></div>
+      <div class="gauges">
+        <div class="g"><div class="lbl"><span>Lane run-off (conventional = 100)</span><b>−76%</b></div><div class="tr b"><i data-w="100"></i></div><div class="tr a"><i data-w="24"></i></div><small>Red: conventional · Teal: permeable lane. Field-study average.</small></div>
+        <div class="g"><div class="lbl"><span>42 km of drains, cost</span><b>₹14–35 Cr → ₹5 Cr</b></div><div class="tr b"><i data-w="70"></i></div><div class="tr a"><i data-w="14.3"></i></div><small>Concrete bar shows the midpoint of the range. Benchmark uses Delhi 2023 rates and is our estimate.</small></div>
+        <div class="g"><div class="lbl"><span>3BHK home, ₹ lakh</span><b>27.4 → 25.0</b></div><div class="tr b"><i data-w="91.3"></i></div><div class="tr a"><i data-w="83.3"></i></div><small>Mid case from our model.</small></div>
+        <div class="g"><div class="lbl"><span>Facade carbon (conventional = 100)</span><b>about −90%</b></div><div class="tr b"><i data-w="100"></i></div><div class="tr a"><i data-w="10"></i></div><small>Low-carbon office frame.</small></div>
+      </div>
+      <div class="note">All "after" figures are planning estimates from our research. They need field validation and engineering review before anyone relies on them.</div>
+    </div>
+  </section>
+</main>
+
+<section class="close" id="end" data-nav="Next">
+  <h2 class="rv">From a town that floods to a town that is measured, costed and monitored.</h2>
+  <p class="rv" style="--d:.1s">Next: verify the original GeM bid documents, find the smallest credible government package, line up qualified partners, and confirm which Mulki data exist.</p>
+  <div class="src rv" style="--d:.15s"><b>Sources and caveats.</b> Business model, services, pricing, tender examples and positioning come from our research handoff. Tender data was reported by third-party trackers and must be checked against the original GeM documents (gem.gov.in). Procurement rules: Department of Expenditure, Manual for Procurement of Consultancy Services, 2025 (doe.gov.in). The Mulki figures for energy, water, roads and housing are our team's planning estimates, not validated designs. Pricing is not market-verified. The first-year revenue is a scenario, not a forecast.</div>
+</section>
+<footer>Sustainable Mulki Solutions · Hult sustainability hackathon · SDG 11</footer>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))};
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* section dots */
+var secs=$$('[data-nav]'),dots=$('#dots');
+secs.forEach(function(s){var a=document.createElement('a');a.href='#'+s.id;a.setAttribute('aria-label',s.dataset.nav);a.innerHTML='<span>'+s.dataset.nav+'</span>';dots.appendChild(a);s._dot=a});
+
+/* counters + bars */
+function count(el){
+  var to=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),sep=el.dataset.sep,pre=el.dataset.pre||'',suf=el.dataset.suf||'';
+  var fmt=function(v){var s=dec?v.toFixed(dec):Math.round(v).toString();if(sep)s=Number(s).toLocaleString('en-IN');return pre+s+suf};
+  if(reduce){el.textContent=fmt(to);return}
+  var t0=null;(function f(t){if(!t0)t0=t;var k=clamp((t-t0)/1400,0,1),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e);if(k<1)requestAnimationFrame(f)})(performance.now());
+}
+function fillBars(el){[].forEach.call(el.querySelectorAll('[data-w]'),function(b,i){setTimeout(function(){b.style.width=b.dataset.w+'%'},i*180)})}
+
+/* reveal */
+if(!('IntersectionObserver' in window)){$$('.rv,.node,.card').forEach(function(e){e.classList.add('in')});$$('[data-count]').forEach(count);$$('[data-w]').forEach(function(b){b.style.width=b.dataset.w+'%'})}
+else{
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  $$('.rv,.node').forEach(function(el){io.observe(el)});
+  var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;io2.unobserve(el);if(el.dataset.count!==undefined)count(el);else fillBars(el)})},{threshold:.55});
+  $$('[data-count],#revBars,.g').forEach(function(el){io2.observe(el)});
+}
+
+/* spine, progress, parallax, active dot */
+var flow=$('#flow'),fill=$('#fill'),prog=$('#prog'),orbs=$$('.orb'),ticking=false;
+function update(){
+  ticking=false;var y=window.scrollY,vh=window.innerHeight,r=flow.getBoundingClientRect();
+  fill.style.height=clamp(vh*.55-r.top,0,r.height)+'px';
+  var max=document.documentElement.scrollHeight-vh;prog.style.width=(max>0?y/max*100:0)+'%';
+  if(!reduce)orbs.forEach(function(o){o.style.transform='translate3d(0,'+(-y*parseFloat(o.dataset.p))+'px,0)'});
+  var cur=null;secs.forEach(function(s){if(s.getBoundingClientRect().top<vh*.5)cur=s});
+  secs.forEach(function(s){s._dot.classList.toggle('on',s===cur)});
+}
+function req(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+addEventListener('scroll',req,{passive:true});addEventListener('resize',req);update();
+
+/* rain in the scene */
+function rain(id,n){var g=document.getElementById(id);for(var i=0;i<n;i++){var l=document.createElementNS('http://www.w3.org/2000/svg','line'),x=Math.random()*860;l.setAttribute('x1',x);l.setAttribute('y1',0);l.setAttribute('x2',x-5);l.setAttribute('y2',16);l.setAttribute('class','rainline');l.style.animationDelay=(-Math.random()*1)+'s';l.style.animationDuration=(.7+Math.random()*.5)+'s';g.appendChild(l)}}
+rain('rainB',46);rain('rainA',7);
+
+/* before/after slider */
+var cmp=$('#cmp'),handle=$('#handle'),pos=50,drag=false,sweeping=false;
+function setPos(p){pos=clamp(p,2,98);cmp.style.setProperty('--pos',pos+'%');handle.setAttribute('aria-valuenow',Math.round(pos))}
+function fromEvent(e){var r=cmp.getBoundingClientRect();setPos((e.clientX-r.left)/r.width*100)}
+cmp.addEventListener('pointerdown',function(e){sweeping=false;drag=true;cmp.setPointerCapture(e.pointerId);fromEvent(e)});
+cmp.addEventListener('pointermove',function(e){if(drag)fromEvent(e)});
+['pointerup','pointercancel'].forEach(function(n){cmp.addEventListener(n,function(){drag=false})});
+handle.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){setPos(pos-4);e.preventDefault()}else if(e.key==='ArrowRight'){setPos(pos+4);e.preventDefault()}});
+if('IntersectionObserver' in window&&!reduce){
+  var sw=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;sw.disconnect();sweeping=true;var t0=null,keys=[[0,50],[.28,88],[.72,12],[1,50]];
+    (function f(t){if(!sweeping)return;if(!t0)t0=t;var k=clamp((t-t0)/3600,0,1),i=1;while(i<keys.length-1&&k>keys[i][0])i++;var a=keys[i-1],b=keys[i],u=(k-a[0])/(b[0]-a[0]),e=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;setPos(a[1]+(b[1]-a[1])*e);if(k<1)requestAnimationFrame(f);else sweeping=false})(performance.now())},{threshold:.6});
+  sw.observe(cmp);
+}
+})();
+</script>
+</body>
+</html>

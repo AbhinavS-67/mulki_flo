@@ -25,7 +25,7 @@ st.markdown(
 )
 
 pages = [
-    st.Page("views/flowchart.py", title="Business Flowchart", icon="🏙️", default=True),
-    st.Page("views/model_3d.py", title="3D Model", icon="🏠"),
+    st.Page("flowchart.py", title="Business Flowchart", icon="🏙️", default=True),
+    st.Page("model_3d.py", title="3D Model", icon="🏠"),
 ]
 st.navigation(pages).run()
